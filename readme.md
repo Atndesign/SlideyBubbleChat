@@ -3,6 +3,9 @@
 ## Idea
 The idea was that I wanted something for my upcoming streams, and I wanted to make the custom style, so I used comfy.JS made by Instafluff so I can connect to twitch the easy way 
 
+SpankyG2: 
+"You should use the color from each viewer", and so I did!
+
 <img src="./screenshot.png"
      alt="demo" />
 

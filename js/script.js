@@ -15,24 +15,23 @@ function getUrlVars() {
   return vars;
 }
 
-function ChatBubble(user, message) {
-  this.colors = [
-    "80, 201, 206",
-    "114, 161, 229",
-    "152, 131, 229",
-    "252, 211, 222"
-  ];
+function ChatBubble(user, message, extra) {
+  //   this.colors = [
+  //     "80, 201, 206",
+  //     "114, 161, 229",
+  //     "152, 131, 229",
+  //     "252, 211, 222"
+  //   ];
 
-  this.randomColors = function(colors) {
-    let randIndex = Math.floor(Math.random() * colors.length);
-    return colors[randIndex];
-  };
+  //   this.randomColors = function(colors) {
+  //     let randIndex = Math.floor(Math.random() * colors.length);
+  //     return colors[randIndex];
+  //   };
 
   this.render = function() {
     let content = document.createElement("div");
     content.classList.add("content-container");
-    content.style.backgroundColor =
-      "rgba(" + this.randomColors(this.colors) + ",.6)";
+    content.style.backgroundColor = extra.userColor;
     let username = document.createElement("p");
     username.classList.add("bold");
     username.textContent = user;
@@ -49,7 +48,8 @@ function ChatBubble(user, message) {
 }
 
 ComfyJS.onChat = (user, message, flags, self, extra) => {
-  let chat = new ChatBubble(user, message);
+  console.log(extra);
+  let chat = new ChatBubble(user, message, extra);
   chat.render();
 };
 ComfyJS.Init(channelName);
