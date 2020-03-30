@@ -1,0 +1,39 @@
+// $colors: #72A1E5,
+// #9883E5,
+// #50C9CE,
+// #FCD3DE;
+body {
+    padding: 16px;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.content-container {
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    padding: 16px;
+    display: flex;
+    background-color: #72A1E5;
+    border-radius: 16px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    animation: 1s slidein forwards cubic-bezier(0.85, -0.02, 1, 1);
+}
+
+.avatar-container {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    background-image: url("https://images.unsplash.com/photo-1493666438817-866a91353ca9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&s=b616b2c5b373a80ffc9636ba24f7a4a9");
+    background-size: cover;
+    margin-right: 32px;
+}
+
+@keyframes slidein {
+    from {
+        right: -300%;
+    }
+
+    to {
+        right: 0%;
+    }
+}
