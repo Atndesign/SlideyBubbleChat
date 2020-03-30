@@ -1,3 +1,20 @@
+let channelName;
+if (getUrlVars()["channel"]) {
+  channelName = getUrlVars()["channel"];
+}
+
+function getUrlVars() {
+  var vars = {};
+  var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(
+    m,
+    key,
+    value
+  ) {
+    vars[key] = value;
+  });
+  return vars;
+}
+
 function ChatBubble(user, message) {
   this.colors = [
     "80, 201, 206",
@@ -35,4 +52,4 @@ ComfyJS.onChat = (user, message, flags, self, extra) => {
   let chat = new ChatBubble(user, message);
   chat.render();
 };
-ComfyJS.Init("Atndesign");
+ComfyJS.Init(channelName);
