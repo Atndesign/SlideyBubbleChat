@@ -14,6 +14,6 @@ The idea was that I wanted something for my upcoming streams, and I wanted to ma
 if you use OBS
 
 1. Add a browser source
-2. Paste it the link 
+2. Paste it the link: https://atndesign.github.io/SlideyBubbleChat/
 3. add at the end of the link "?channel=yourChannelName"
 4. Enjoy your slidy bubble chat ! 
