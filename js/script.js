@@ -31,7 +31,12 @@ function ChatBubble(user, message, extra) {
   this.render = function() {
     let content = document.createElement("div");
     content.classList.add("content-container");
-    content.style.backgroundColor = extra.userColor;
+    if(extra.userColor != null){
+      content.style.backgroundColor = extra.userColor;
+    }
+    else{
+      content.style.backgroundColor = "rgb(114, 161, 229)";
+    }
     let username = document.createElement("p");
     username.classList.add("bold");
     username.textContent = user;
